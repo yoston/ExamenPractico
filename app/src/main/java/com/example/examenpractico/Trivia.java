@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +23,7 @@ public class Trivia extends AppCompatActivity {
     Button btOpcion3;
     Button btOpcion4;
     TextView tvPregunta;
+    ImageView imbPregunta;
     int opcion=0;
     int correcto=0;
     int n=0;
@@ -37,6 +40,7 @@ public class Trivia extends AppCompatActivity {
         btOpcion3 = (Button) findViewById(R.id.btOpcion3);
         btOpcion4 = (Button) findViewById(R.id.btOpcion4);
         tvPregunta = (TextView) findViewById(R.id.tvPregunta);
+        imbPregunta = (ImageView) findViewById(R.id.imPregunta);
 
 /*
         Random rand = new Random();
@@ -94,6 +98,7 @@ public class Trivia extends AppCompatActivity {
         btOpcion2.setText(R.string.opcion_1_2);
         btOpcion3.setText(R.string.opcion_1_3);
         btOpcion4.setText(R.string.opcion_1_4);
+        imbPregunta.setImageResource(R.drawable.pregunta1);
         correcto= 2;
     }
 
@@ -103,6 +108,7 @@ public class Trivia extends AppCompatActivity {
         btOpcion2.setText(R.string.opcion_2_2);
         btOpcion3.setText(R.string.opcion_2_3);
         btOpcion4.setText(R.string.opcion_2_4);
+        imbPregunta.setImageResource(R.drawable.pregunta2);
         correcto= 2;
     }
 
@@ -112,6 +118,7 @@ public class Trivia extends AppCompatActivity {
         btOpcion2.setText(R.string.opcion_3_2);
         btOpcion3.setText(R.string.opcion_3_3);
         btOpcion4.setText(R.string.opcion_3_4);
+        imbPregunta.setImageResource(R.drawable.pregunta3);
         correcto= 3;
     }
 
@@ -121,6 +128,7 @@ public class Trivia extends AppCompatActivity {
         btOpcion2.setText(R.string.opcion_4_2);
         btOpcion3.setText(R.string.opcion_4_3);
         btOpcion4.setText(R.string.opcion_4_4);
+        imbPregunta.setImageResource(R.drawable.pregunta4);
         correcto= 4;
     }
 
@@ -130,6 +138,7 @@ public class Trivia extends AppCompatActivity {
         btOpcion2.setText(R.string.opcion_5_2);
         btOpcion3.setText(R.string.opcion_5_3);
         btOpcion4.setText(R.string.opcion_5_4);
+        imbPregunta.setImageResource(R.drawable.pregunta5);
         correcto= 1;
     }
 
@@ -167,23 +176,21 @@ public class Trivia extends AppCompatActivity {
             respuestas+=1;
             if (respuestas<5){
                 n=randomList.get(respuestas);
+                correcto = 0;
+                getQuestion(n);
             }
-
-
-            Random rand = new Random();
-            n = rand.nextInt(4) + 1;
-            correcto = 0;
-            getQuestion(n);
-            Toast.makeText(Trivia.this,"Correcto",Toast.LENGTH_SHORT).show();
-
+            else {
+                Intent intent = new Intent(Trivia.this, Ganador.class);
+                startActivity(intent);
+                finish();
+            }
         }
         else {
             Intent intent = new Intent(Trivia.this, GameOver.class);
-            startActivity(intent);
             intent.putExtra("ans",respuestas);
+            startActivity(intent);
             finish();
         }
-
 
     }
 

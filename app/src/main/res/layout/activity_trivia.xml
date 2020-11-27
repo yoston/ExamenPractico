@@ -14,7 +14,8 @@
 
 
 
-    <ImageButton
+    <ImageView
+        android:id="@+id/imPregunta"
         android:layout_width="250dp"
         android:layout_height="250dp"
         />
