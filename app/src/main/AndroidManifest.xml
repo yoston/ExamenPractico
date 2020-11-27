@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenPractico">
-        <activity android:name=".Bienvenidos"></activity>
+        <activity android:name=".Ganador"></activity>
+        <activity android:name=".GameOver" />
+        <activity android:name=".Trivia" />
+        <activity android:name=".Principal" />
+        <activity android:name=".Bienvenidos" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
