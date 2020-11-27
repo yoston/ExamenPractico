@@ -10,7 +10,9 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 public class Trivia extends AppCompatActivity {
@@ -24,6 +26,7 @@ public class Trivia extends AppCompatActivity {
     int n=0;
     int respuestas=0;
 
+    List<Integer> randomList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,11 +38,17 @@ public class Trivia extends AppCompatActivity {
         btOpcion4 = (Button) findViewById(R.id.btOpcion4);
         tvPregunta = (TextView) findViewById(R.id.tvPregunta);
 
-
+/*
         Random rand = new Random();
         n = rand.nextInt(4) + 1;
+
+ */
+        getRandomList();
+
         correcto = 0;
+        n= randomList.get(0);
         getQuestion(n);
+
 
 
 
@@ -144,6 +153,10 @@ public class Trivia extends AppCompatActivity {
         }
     }
 
+    public void getRandomList(){
+        randomList = Arrays.asList(1,2,3,4,5);
+        Collections.shuffle(randomList);
+    }
 
 
     public void opciones(View v) {
@@ -152,13 +165,17 @@ public class Trivia extends AppCompatActivity {
 
         if (opcion==correcto){
             respuestas+=1;
+            if (respuestas<5){
+                n=randomList.get(respuestas);
+            }
+
 
             Random rand = new Random();
             n = rand.nextInt(4) + 1;
             correcto = 0;
             getQuestion(n);
-
             Toast.makeText(Trivia.this,"Correcto",Toast.LENGTH_SHORT).show();
+
         }
         else {
             Intent intent = new Intent(Trivia.this, GameOver.class);
