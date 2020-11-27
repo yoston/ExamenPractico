@@ -42,53 +42,12 @@ public class Trivia extends AppCompatActivity {
         tvPregunta = (TextView) findViewById(R.id.tvPregunta);
         imbPregunta = (ImageView) findViewById(R.id.imPregunta);
 
-/*
-        Random rand = new Random();
-        n = rand.nextInt(4) + 1;
 
- */
         getRandomList();
 
         correcto = 0;
         n= randomList.get(0);
         getQuestion(n);
-
-
-
-
-/*
-        for (int i = 1; i <= 5; i++) {
-            int n = rand.nextInt(4) + 1;
-            correcto = 0;
-            switch(n) {
-                case 1:
-                    correcto=pregunta1();
-                    break;
-                case 2:
-                    correcto=pregunta2();
-                    break;
-                case 3:
-                    correcto=pregunta3();
-                    break;
-                case 4:
-                    correcto=pregunta4();
-                    break;
-                case 5:
-                    correcto=pregunta5();
-                    break;
-            }
-
-            opcion=0;
-            while (opcion!=0){}
-
-            if(opcion)
-        }
-
-*/
-
-       // pregunta1();
-       // pregunta2();
-
 
     }
 
