@@ -1,68 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center"
+android:layout_marginVertical="30dp"
+android:layout_marginHorizontal="50dp"
+tools:context=".GameOver">
+
+
+<ImageView
+    android:id="@+id/imageView2"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    app:srcCompat="@drawable/sad" />
+
+<TextView
+    android:id="@+id/txtlost"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_marginTop="10dp"
+    android:text="Lo siento, ha perdido "
+    android:textSize="24sp" />
+
+<TextView
+    android:id="@+id/txtans"
+    android:layout_width="wrap_content"
+    android:layout_height="59dp"
+    android:layout_marginTop="8dp"
+    android:text="Preguntas respondidas: "
+    android:textSize="24sp" />
+
+<Button
+    android:id="@+id/button"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".GameOver">
+    android:layout_height="50dp"
+    android:layout_marginTop="30dp"
+    android:text="Volver a Jugar"
+    android:onClick="toPrincipal"
+    app:backgroundTint="#000000" />
+
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="258dp"
-        android:layout_height="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:text="Salir"
         android:textColor="#000000"
         app:backgroundTint="#00000000"
         app:iconTint="#171616"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:onClick="exit"
         app:rippleColor="#4C1515" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="191dp"
-        android:layout_height="292dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/sad" />
-
-    <TextView
-        android:id="@+id/txtlost"
-        android:layout_width="252dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Lo siento, ha perdido "
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/txtans"
-        android:layout_width="319dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="Preguntas respondidas: "
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtlost" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="262dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="60dp"
-        android:text="Volver a Jugar"
-        android:onClick="toPrincipal"
-        app:backgroundTint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtans" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
