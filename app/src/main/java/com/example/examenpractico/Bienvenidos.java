@@ -18,14 +18,13 @@ public class Bienvenidos extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Bienvenidos.this, Trivia.class);
+                Intent intent = new Intent(Bienvenidos.this, Principal.class);
                 startActivity(intent);
                 finish();
             }
         }, 1000);
     }
 }
-
 
 
 
