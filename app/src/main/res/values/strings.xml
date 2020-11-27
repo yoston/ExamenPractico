@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">ExamenPractico</string>
+
+    <string name="pregunta_1">¿Cuál fue el título original de la película de Star Wars?</string>
+    <string name="opcion_1_1">Batallas de estrellas</string>
+    <string name="opcion_1_2">Aventuras de Luke Starkiller</string>
+    <string name="opcion_1_3">Las aventuras de los Jedi</string>
+    <string name="opcion_1_4">Batallas en el espacio</string>
+
+    <string name="pregunta_2">¿De qué color es el brazo de C-3PO en Star Wars: The Force Awakens?</string>
+    <string name="opcion_2_1">Negro</string>
+    <string name="opcion_2_2">Rojo</string>
+    <string name="opcion_2_3">Azul</string>
+    <string name="opcion_2_4">Plata</string>
+
+    <string name="pregunta_3">¿Qué apodo llama Han Solo a Luke Skywalker que lo vuelve loco?</string>
+    <string name="opcion_3_1">Buckaroo</string>
+    <string name="opcion_3_2">Niño</string>
+    <string name="opcion_3_3">Skydancer</string>
+    <string name="opcion_3_4">Lukie</string>
+
+    <string name="pregunta_4">¿Cuál fue el trabajo que Finn le dijo a Han Solo que tenía en la base Starkiller?</string>
+    <string name="opcion_4_1">Piloto</string>
+    <string name="opcion_4_2">Saneamiento</string>
+    <string name="opcion_4_3">Guardia</string>
+    <string name="opcion_4_4">Cocinero</string>
+
+    <string name="pregunta_5">¿Dónde comenzaron las Guerras Clon?</string>
+    <string name="opcion_5_1">Tatooine</string>
+    <string name="opcion_5_2">Geonosis</string>
+    <string name="opcion_5_3">Naboo</string>
+    <string name="opcion_5_4">Coruscant</string>
+
 </resources>
