@@ -6,4 +6,49 @@
     android:layout_height="match_parent"
     tools:context=".Principal">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="310dp"
+        android:layout_height="228dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logostarwars" />
+
+    <TextView
+        android:id="@+id/textTrivia"
+        android:layout_width="148dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Trivia"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/begin"
+        android:layout_width="256dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="116dp"
+        android:text="Empezar!"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTrivia" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="290dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="116dp"
+        android:text="Desarrollado por Jhonston Benjumea y Leonardo Ortiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/begin" />
 </androidx.constraintlayout.widget.ConstraintLayout>
