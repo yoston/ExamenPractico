@@ -6,4 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".Ganador">
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="258dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        android:text="Salir"
+        android:textColor="#000000"
+        app:backgroundTint="#00000000"
+        app:iconTint="#171616"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:rippleColor="#4C1515" />
+
+    <TextView
+        android:id="@+id/txtlost"
+        android:layout_width="252dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Ha ganado una entrada al cine"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="146dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtlost"
+        app:srcCompat="@drawable/happy" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="268dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/qr_code" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
